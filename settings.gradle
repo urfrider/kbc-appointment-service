@@ -1,1 +1,2 @@
 rootProject.name = 'kbc-appointment-service'
+includeBuild '../kbc-common-library'

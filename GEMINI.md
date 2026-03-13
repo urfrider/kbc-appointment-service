@@ -23,7 +23,7 @@ The project follows a standard layered architecture:
 
 ### Prerequisites:
 - JDK 25
-- PostgreSQL (configured with `kbc` database, `appointment` schema)
+- PostgreSQL (configured with `kbc-dev` database, `appointment` schema)
 
 ### Commands:
 ```bash

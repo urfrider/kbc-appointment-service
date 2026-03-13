@@ -1,6 +1,6 @@
 package kbc.kbc_appointment_service.controller;
 
-import kbc.kbc_appointment_service.constant.RoleConstants;
+import kbc.common.constant.RoleConstants;
 import kbc.kbc_appointment_service.model.AppointmentDto;
 import kbc.kbc_appointment_service.model.CreateAppointmentRequest;
 import kbc.kbc_appointment_service.model.UpdateAppointmentRequest;
