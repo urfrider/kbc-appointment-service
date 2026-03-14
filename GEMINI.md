@@ -6,6 +6,7 @@ The **KBC Appointment Service** is a Spring Boot application (version 4.0.3) des
 ### Main Technologies:
 - **Language:** Java 25
 - **Framework:** Spring Boot 4
+- **kbc-common-library** for shared security and infrastructure.
 - **Persistence:** Spring Data JPA with PostgreSQL
 - **Build System:** Gradle
 - **Libraries:** Lombok (for boilerplate reduction), Hibernate/JPA.
