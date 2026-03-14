@@ -1,20 +1,18 @@
 package kbc.kbc_appointment_service.entity;
 
+import kbc.common.entity.BaseAuditEntity;
 import kbc.kbc_appointment_service.constant.AppointmentStatus;
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
-import java.time.OffsetDateTime;
 
 @Entity
 @Table(name = "appointment", schema = "appointment")
 @Data
+@EqualsAndHashCode(callSuper = true)
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Appointment {
+public class Appointment extends BaseAuditEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,7 +28,7 @@ public class Appointment {
     private Long adminId;
 
     @Column(name = "appointment_at", nullable = false)
-    private OffsetDateTime appointmentAt;
+    private java.time.OffsetDateTime appointmentAt;
 
     @Enumerated(EnumType.STRING)
     @Builder.Default
@@ -39,12 +37,4 @@ public class Appointment {
 
     @Column(columnDefinition = "TEXT")
     private String notes;
-
-    @CreationTimestamp
-    @Column(name = "created_at", updatable = false)
-    private OffsetDateTime createdAt;
-
-    @UpdateTimestamp
-    @Column(name = "updated_at")
-    private OffsetDateTime updatedAt;
 }

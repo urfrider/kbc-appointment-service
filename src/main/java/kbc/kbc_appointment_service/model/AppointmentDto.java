@@ -19,6 +19,8 @@ public class AppointmentDto {
     private String notes;
     private OffsetDateTime createdAt;
     private OffsetDateTime updatedAt;
+    private String createdBy;
+    private String updatedBy;
 
     public static AppointmentDto from(Appointment appointment) {
         if (appointment == null) return null;
@@ -32,6 +34,8 @@ public class AppointmentDto {
                 .notes(appointment.getNotes())
                 .createdAt(appointment.getCreatedAt())
                 .updatedAt(appointment.getUpdatedAt())
+                .createdBy(appointment.getCreatedBy())
+                .updatedBy(appointment.getUpdatedBy())
                 .build();
     }
 }
